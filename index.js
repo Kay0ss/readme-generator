@@ -45,28 +45,32 @@ inquirer.prompt([
     const github = response.github
     console.log(github)
 
-    const portfolioHtml = `
+    const readme = `
 
-    # Username 
-    ## $(userName)
+    # "Username" 
+    ## "${userName}"
 
-    # Location
-    ## $(location)
+    # "Location"
+    ## "${location}"
 
     # Bio
-    ## $(bio)
+    ## ${bio}
 
     # Linkedin
-    ## $(linkedin)
+    ## ${linkedin}
 
     # Github
-    ## $(github)`
+    ## ${github}`
 
     
 
 
 
-    fs.writeFile('index.html', portfolioHtml, err =>{
+    fs.writeFile('GeneratedReadme.md', readme, err =>{
+        err ? console.log ('oops') : console.log ('yay')
+    })
+
+    generateMarkdown.writeFile('ReadmeGen1.md' , readme, err =>{
         err ? console.log ('oops') : console.log ('yay')
     })
 })
