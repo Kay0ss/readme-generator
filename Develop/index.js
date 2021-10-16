@@ -26,47 +26,46 @@ inquirer
     },
     {
       type: "input",
-      message: "List your collaborators, with links to their Github profiles",
+      message: "List your collaborators, with links to their Github profiles.",
       name: "credits",
     },    
     {
-        type: "input",
+        type: "list",
         message: "What is your license type for the project? If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/)",
         name: "license",
+        choices: ['test1','test2','test3','test4','test5'],
     },
     
   ])
 
   .then((response) => {
     const projectTitle = response.title;
-    console.log(projectTitle);
+    console.log("Title: " + projectTitle);
 
     const projDescription = response.description;
-    console.log(projDescription);
+    console.log("Description: " + projDescription);
 
     const install = response.installation;
-    console.log(install);
+    console.log("Installation Notes: " + install);
 
     const usageNotes = response.usage;
-    console.log(usageNotes);
+    console.log("Usage Notes: " + usageNotes);
 
     const credit = response.credits;
-    console.log(credit);
+    console.log("Credits: " + credit);
 
     const licenseInfo = response.license;
-    console.log(licenseInfo);
+    console.log("License: " + licenseInfo);
 
     const temp = generateMarkdown(response);
 
-    const readme = `# Username
-
-## ${projectTitle}
+    const readme = `# ${projectTitle}
 
 # Description
 ## ${projDescription}
 
 # Table of Contents
-## 
+## [Installation] (#Installation)
 
 # Installation
 ## ${install}
@@ -85,6 +84,6 @@ inquirer
     `;
 
     fs.writeFile("GeneratedReadme.md", readme, (err) => {
-      err ? console.log("oops") : console.log("yay");
+      err ? console.log("oops it didn't work") : console.log("yay it worked");
     });
   });
