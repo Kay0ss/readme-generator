@@ -1,6 +1,31 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
+const test = require("./utils/generateMarkdown");
+const MIT = `"MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE."`;
+
+const GNU = `"GNU Licence
+"`;
 
 inquirer
   .prompt([
@@ -31,9 +56,9 @@ inquirer
     },    
     {
         type: "list",
-        message: "What is your license type for the project? If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/)",
+        message: "Choose a license that works best for your project",
         name: "license",
-        choices: ['test1','test2','test3','test4','test5'],
+        choices: [{name:"MIT", value:0 },{name:"GNU", value:1 },'test3','test4','test5'],
     },
     
   ])
@@ -53,10 +78,16 @@ inquirer
 
     const credit = response.credits;
     console.log("Credits: " + credit);
+    
+    var licenseInfo = "";
 
-    const licenseInfo = response.license;
-    console.log("License: " + licenseInfo);
-
+    if (response.license === 0){
+        licenseInfo = MIT;
+        console.log("License: MIT")
+    } else if (response.license === 1){
+        licenseInfo = GNU;
+    }
+    
     const temp = generateMarkdown(response);
 
     const readme = `# ${projectTitle}
@@ -83,7 +114,11 @@ inquirer
     
     `;
 
+    
+
     fs.writeFile("GeneratedReadme.md", readme, (err) => {
-      err ? console.log("oops it didn't work") : console.log("yay it worked");
+      err ? console.log("oops it didn't work") : console.log("Check the GeneratedReadme file");
     });
   });
+
+  console.log(test);
