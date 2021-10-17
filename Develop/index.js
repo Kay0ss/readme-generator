@@ -999,7 +999,7 @@ inquirer
 ## ${projDescription}
 
 # Table of Contents
-## [Installation] (#Installation) Still in development
+## ~~Still in development~~
 
 
 # Installation
