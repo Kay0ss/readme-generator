@@ -1000,7 +1000,13 @@ inquirer
 ## ${projDescription}
 
 # Table of Contents
-## ~~Still in development~~
+
+[test](#installation)
+[Usage](#usage)
+[Credits](#credits)
+[License](#license)
+[Questions](#questions)
+
 
 
 # Installation

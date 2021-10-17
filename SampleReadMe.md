@@ -4,7 +4,12 @@
 ## It is a simple readme generator that uses the terminal and a few prompts from the user to complete.
 
 # Table of Contents
-## ~~Still in development~~
+
+[test](#installation)
+[Usage](#usage)
+[Credits](#credits)
+[License](#license)
+[Questions](#questions)
 
 
 # Installation
