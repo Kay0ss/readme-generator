@@ -5,11 +5,11 @@
 
 # Table of Contents
 
-[test](#installation)
-[Usage](#usage)
-[Credits](#credits)
-[License](#license)
-[Questions](#questions)
+- [test](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
 
 
 # Installation
