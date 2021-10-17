@@ -1,22 +1,24 @@
-# Read Me Generator
+# ff
 
 # Description
-## It is a simple readme generator that uses the terminal and a few prompts from the user to complete.
+## ff
 
 # Table of Contents
 ## ~~Still in development~~
 
 
 # Installation
-## Just open the terminal and type node install
+## ff
 
 
 # Usage
-## Once you have the packages installed, open the terminal for the develop folder and type node index.js
+## ff
+![](../assets/img/guide.gif)
+
 
 
 # Credits
-## (Creator) Jack Theisen. Github: github.com/KayOss
+## ff
 
 
 # License
@@ -44,8 +46,8 @@ SOFTWARE.
 
 
 # Questions
-## github.com/KayOss
-## jackschoolbiz@gmail.com simply email me with any questions or bugs and I will respond as quick as I can.
+## ff
+## ff
 
 
     

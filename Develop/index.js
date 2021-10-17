@@ -8,6 +8,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 const writeMITtext = require("./utils/generateMarkdown");
+const guide = ("./assets/img/guide.gif")
 const MIT = `MIT License
 
 Copyright (c)
@@ -1008,6 +1009,8 @@ inquirer
 
 # Usage
 ## ${usageNotes}
+
+
 
 
 # Credits

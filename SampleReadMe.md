@@ -13,6 +13,7 @@
 
 # Usage
 ## Once you have the packages installed, open the terminal for the develop folder and type node index.js
+![](Develop/assets/img/guide.gif)
 
 
 # Credits
