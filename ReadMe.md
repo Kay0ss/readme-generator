@@ -20,6 +20,9 @@
 ## Once you have the packages installed, open the terminal for the develop folder and type node index.js
 ![](Develop/assets/img/guide.gif)
 
+# Instructions Video
+## https://drive.google.com/file/d/1d5KC1XmpXDVOYsAB6lFzZs_g24_911XR/view?usp=sharing
+
 
 # Credits
 ## (Creator) Jack Theisen. Github: github.com/KayOss
